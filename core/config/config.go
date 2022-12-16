@@ -3,6 +3,7 @@ package config
 import (
 	"github.com/spf13/viper"
 	"log"
+	"os"
 )
 
 var (
@@ -21,6 +22,7 @@ type User struct {
 
 type Yaml struct {
 	User []*User `yaml:"user"`
+	Time string  `yaml:"time"`
 }
 
 func Init() {
@@ -43,5 +45,9 @@ func Init() {
 		log.Println("=================")
 		log.Println(user.Name, "===", user.MsgId)
 		log.Println("=================")
+	}
+	time := os.Getenv("Time")
+	if time != "" {
+		config.Time = time
 	}
 }
