@@ -1,8 +1,9 @@
 FROM golang:1.19-alpine as builder
 WORKDIR /app
 COPY . .
-ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apk update && apk add tzdata
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo "Asia/Shanghai" > /etc/timezone
 RUN go env -w GOPROXY=https://goproxy.cn,direct \
     && echo "Asia/shanghai" > /etc/timezone \
     && go mod tidy \
