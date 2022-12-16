@@ -1,3 +1,4 @@
+# go掘金签到小脚本
 ## 设置cookie
 去掘金网站找到![img.png](imgs/img2.png)这个接口，复制下面的cookie到配置文件的cookie里
 ![img.png](imgs/img.png)
