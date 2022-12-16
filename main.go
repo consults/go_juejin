@@ -12,6 +12,7 @@ import (
 )
 
 func Task() {
+	fmt.Println("开始执行任务")
 	for _, user := range config.GetConfig().User {
 		var result model.Result
 		result.UserName = requests.GetUser(user.Cookie)
@@ -69,8 +70,9 @@ func Task() {
 }
 func main() {
 	config.Init()
-	s := gocron.NewScheduler(time.UTC)
-	s.Every(1).Days().At("15:58").Do(Task)
+	timezone, _ := time.LoadLocation("Asia/Shanghai")
+	s := gocron.NewScheduler(timezone)
+	s.Every(1).Days().At("16:20").Do(Task)
 	s.StartAsync()
-	select {}
+	s.StartBlocking()
 }
