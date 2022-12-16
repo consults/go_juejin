@@ -70,7 +70,7 @@ func Task() {
 func main() {
 	config.Init()
 	s := gocron.NewScheduler(time.UTC)
-	s.Every(1).Days().At("14:35").Do(Task)
+	s.Every(1).Days().At("14:58").Do(Task)
 	s.StartAsync()
 	select {}
 }
