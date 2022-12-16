@@ -2,15 +2,16 @@ package main
 
 import (
 	"fmt"
+	"github.com/go-co-op/gocron"
 	"jj/core/config"
 	"jj/core/model"
 	"jj/core/msg"
 	"jj/core/requests"
 	"strings"
+	"time"
 )
 
-func main() {
-	config.Init()
+func Task() {
 	for _, user := range config.GetConfig().User {
 		var result model.Result
 		result.UserName = requests.GetUser(user.Cookie)
@@ -65,4 +66,11 @@ func main() {
 		}
 		msg.SendMsg(user.MsgId, "", strings.Join(content, "\n"))
 	}
+}
+func main() {
+	config.Init()
+	s := gocron.NewScheduler(time.UTC)
+	s.Every(1).Days().At("14:00").Do(Task)
+	s.StartAsync()
+	select {}
 }
