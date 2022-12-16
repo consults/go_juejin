@@ -50,4 +50,5 @@ func Init() {
 	if time != "" {
 		config.Time = time
 	}
+	log.Println("运行时间：", config.Time)
 }
