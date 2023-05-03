@@ -64,7 +64,7 @@ func Task() {
 		} else {
 			content = append(content, "今日已免费抽奖 \n")
 		}
-		msg.SendMsg(user.MsgId, "", strings.Join(content, "\n"))
+		msg.SendMsg(strings.Join(content, "\n"))
 	}
 }
 func main() {
