@@ -3,7 +3,6 @@ package config
 import (
 	"github.com/spf13/viper"
 	"log"
-	"os"
 )
 
 var (
@@ -21,8 +20,8 @@ type User struct {
 }
 
 type Yaml struct {
-	User []*User `yaml:"user"`
-	Time string  `yaml:"time"`
+	User   []*User `yaml:"user"`
+	MsgUrl string  `yaml:"msgUrl"`
 }
 
 func Init() {
@@ -46,9 +45,5 @@ func Init() {
 		log.Println(user.Name, "===", user.MsgId)
 		log.Println("=================")
 	}
-	time := os.Getenv("Time")
-	if time != "" {
-		config.Time = time
-	}
-	log.Println("运行时间：", config.Time)
+	log.Printf("发送消息url：%s \n", config.MsgUrl)
 }

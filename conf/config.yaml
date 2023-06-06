@@ -1,5 +1,5 @@
 user:
-  - cookie: 21671009783
+  - cookie: "__tea_cookie_tokens_2608=%257B%2522web_id%2522%253A%25227212434329665275453%2522%252C%2522user_unique_id%2522%253A%25227212434329665275453%2522%252C%2522timestamp%2522%253A1679275738815%257D; n_mh=ahMzD0Emf1b2OkYyvd1F3_p9T0z5w9TbeV_pP80XnmI; sid_guard=3bcf2f8ad567becec5d2a63a6fe1f455%7C1680585932%7C31536000%7CWed%2C+03-Apr-2024+05%3A25%3A32+GMT; uid_tt=7bd897f13fa7fe3b9fb7740bf0797891; uid_tt_ss=7bd897f13fa7fe3b9fb7740bf0797891; sid_tt=3bcf2f8ad567becec5d2a63a6fe1f455; sessionid=3bcf2f8ad567becec5d2a63a6fe1f455; sessionid_ss=3bcf2f8ad567becec5d2a63a6fe1f455; sid_ucp_v1=1.0.0-KGM3MDg0YzUyYzRjYWZhOGU3MDk1NWIxMjk2MmI3NDI4OGIyNjExYTUKFwiewMDA_fW5BRDM6a6hBhiwFDgCQO8HGgJsZiIgM2JjZjJmOGFkNTY3YmVjZWM1ZDJhNjNhNmZlMWY0NTU; ssid_ucp_v1=1.0.0-KGM3MDg0YzUyYzRjYWZhOGU3MDk1NWIxMjk2MmI3NDI4OGIyNjExYTUKFwiewMDA_fW5BRDM6a6hBhiwFDgCQO8HGgJsZiIgM2JjZjJmOGFkNTY3YmVjZWM1ZDJhNjNhNmZlMWY0NTU; store-region=cn-cq; store-region-src=uid; _tea_utm_cache_2608={%22utm_source%22:%22course_list%22}; csrf_session_id=e52621573939bcd739052b55e022b824; msToken=Tnb5JZMKQKn4GjCTMnl1PrKt6WP5aPlvR896mu7zms1jsqCZoJpjn06ZJ5gnSjrvqSSSjftIwj3e-MXCr20ZwL0y1gSraEvfc62GSdTHlwMIqN7GO0AXR21EF52ZieQ="
     msgId: 40087
-    name: yourname
-time: 08:00
+    name: pillow
+msgUrl: "http://117.50.175.64:9090/send?key=set_a_sendkey"

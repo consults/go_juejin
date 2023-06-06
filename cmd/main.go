@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/go-co-op/gocron"
 	"jj/core/config"
 	"jj/core/model"
 	"jj/core/msg"
 	"jj/core/requests"
 	"strings"
-	"time"
 )
 
 func Task() {
@@ -69,9 +67,5 @@ func Task() {
 }
 func main() {
 	config.Init()
-	timezone, _ := time.LoadLocation("Asia/Shanghai")
-	s := gocron.NewScheduler(timezone)
-	s.Every(1).Days().At(config.GetConfig().Time).Do(Task)
-	s.StartAsync()
-	s.StartBlocking()
+	Task()
 }
